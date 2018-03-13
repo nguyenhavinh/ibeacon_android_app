@@ -1,20 +1,21 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
-
+    tools:context=".MainActivity">
+    <com.example.dell.myapplication.views.CustomView
+        android:id="@+id/customView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
     <EditText
         android:id="@+id/rangingText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="left|top"
         android:inputType="textMultiLine"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true">
-
+        android:layout_below="@+id/customView"
+        tools:ignore="LabelFor">
     </EditText>
 
 </RelativeLayout>

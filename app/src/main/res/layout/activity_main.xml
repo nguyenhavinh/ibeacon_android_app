@@ -8,6 +8,7 @@
         android:id="@+id/customView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:background="@drawable/floor_lv6"
         />
     <EditText
         android:id="@+id/rangingText"

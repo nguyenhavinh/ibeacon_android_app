@@ -79,6 +79,7 @@ public class MainActivity extends Activity implements BeaconConsumer {
                 else {
                     //EditText editText = (EditText)RangingActivity.this.findViewById(R.id.rangingText);
                     for (Beacon beacon:beacons){
+
                         String temp = beacon.getId1().toString();
                         //Log.i(TAG,beacon.getId1().toString() + "\n");
                         //logToDisplay(beacon.getId1() + " at " + beacon.getDistance() + " meters away.");
@@ -94,14 +95,12 @@ public class MainActivity extends Activity implements BeaconConsumer {
                     }
                     getPoint(distance1, distance2, distance3);
                     mCustomView.getXY((int)x, (int)y);
-                    logToDisplay("Beacon 1 (1-7.5): " + String.format("%.2f", distance1) + " m | " +
-                                "Beacon 2 (2-13): " + String.format("%.2f", distance2) + " m | " +
-                                "Beacon 3 (2-4): " + String.format("%.2f", distance3) + " m \n" +
+                    logToDisplay("Beacon 1 (10-580): " + String.format("%.2f", distance1) + " m | " +
+                                "Beacon 2 (10-240): " + String.format("%.2f", distance2) + " m | " +
+                                "Beacon 3 (120-240): " + String.format("%.2f", distance3) + " m \n" +
                                 "Location (x-y): " + x + " - "+ y);
                 }
-
             }
-
         });
 
         try {
@@ -119,12 +118,12 @@ public class MainActivity extends Activity implements BeaconConsumer {
     }
     private void getPoint(double r1, double r2, double r3){
         double x1, y1, x2, y2, x3, y3;
-        x1 = 1;
-        y1 = 7.5;
-        x2 = 2;
-        y2 = 13;
-        x3 = 2;
-        y3 = 4;
+        x1 = 10;
+        y1 = 580;
+        x2 = 10;
+        y2 = 240;
+        x3 = 120;
+        y3 = 240;
         double A = x1 - x2;
         double B = y1 - y2;
         double D = x1 - x3;

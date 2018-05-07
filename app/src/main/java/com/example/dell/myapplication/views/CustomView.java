@@ -28,21 +28,15 @@ public class CustomView extends View{
         if (set == null){
             return;
         }
-
         TypedArray ta = getContext().obtainStyledAttributes(set, R.styleable.MenuView);
-
-
-
         ta.recycle();
     }
     public CustomView(Context context){
         super(context);
-
         init(null);
     }
     public CustomView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         init(attrs);
     }
     public void getXY(int a, int b){
@@ -52,25 +46,25 @@ public class CustomView extends View{
     }
     @Override
     protected void onDraw(Canvas canvas){
-        canvas.drawColor(Color.RED);
+        //canvas.drawColor(Color.RED);
         mSquarePaint.setColor(Color.GREEN);
-        mRectSquare.left = 30;
-        mRectSquare.top = 75 * 3;
+        mRectSquare.left = 10;
+        mRectSquare.top = 20;
         mRectSquare.right = mRectSquare.left + SIZE_DEF;
         mRectSquare.bottom = mRectSquare.top + SIZE_DEF;
         canvas.drawRect(mRectSquare,mSquarePaint);
-        mRectSquare.left = 60;
-        mRectSquare.top = 130 * 3;
+        mRectSquare.left = 120;
+        mRectSquare.top = 340;
         mRectSquare.right = mRectSquare.left + SIZE_DEF;
         mRectSquare.bottom = mRectSquare.top + SIZE_DEF;
         canvas.drawRect(mRectSquare,mSquarePaint);
-        mRectSquare.left = 60;
-        mRectSquare.top = 40 * 3;
+        mRectSquare.left = 10;
+        mRectSquare.top = 340;
         mRectSquare.right = mRectSquare.left + SIZE_DEF;
         mRectSquare.bottom = mRectSquare.top + SIZE_DEF;
         canvas.drawRect(mRectSquare,mSquarePaint);
-        mRectSquare.left = x*30;
-        mRectSquare.top = y*30;
+        mRectSquare.left = x;
+        mRectSquare.top = y;
         mRectSquare.right = mRectSquare.left + SIZE_DEF;
         mRectSquare.bottom = mRectSquare.top + SIZE_DEF;
         mSquarePaint.setColor(Color.BLUE);
